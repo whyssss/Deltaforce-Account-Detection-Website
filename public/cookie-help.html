@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何获取三角洲游戏Cookie - 帮助页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f7fafc;
+            border-left: 4px solid #4299e1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .step h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+        }
+        .step-number {
+            background: #4299e1;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .warning {
+            background: #fed7d7;
+            border: 1px solid #feb2b2;
+            color: #c53030;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .tip {
+            background: #c6f6d5;
+            border: 1px solid #9ae6b4;
+            color: #22543d;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #4299e1;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #3182ce;
+        }
+        .btn-secondary {
+            background: #718096;
+        }
+        .btn-secondary:hover {
+            background: #4a5568;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 如何获取三角洲游戏Cookie</h1>
+        
+        <div class="warning">
+            <strong>⚠️ 重要提醒：</strong>
+            Cookie包含您的登录信息，请勿分享给他人，使用完毕后建议清除浏览器Cookie。
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">1</span>访问三角洲游戏官网</h3>
+            <p>打开浏览器，访问三角洲游戏官方网站：</p>
+            <div class="code">https://df.qq.com/cp/a20241230webmp/index.html</div>
+            <p>或者直接点击下面的链接：</p>
+            <p><a href="https://df.qq.com/cp/a20241230webmp/index.html" target="_blank" class="btn">🌐 访问三角洲官网</a></p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">2</span>登录游戏账号</h3>
+            <p>在网页上使用您的三角洲游戏账号登录。确保登录成功，可以看到您的游戏信息。</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">3</span>打开开发者工具</h3>
+            <p>登录成功后，按键盘上的 <strong>F12</strong> 键，或者右键点击页面选择"检查"或"开发者工具"。</p>
+            <p>在开发者工具中，点击 <strong>Network</strong>（网络）标签页。</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">4</span>刷新页面</h3>
+            <p>在开发者工具打开的情况下，刷新页面（按F5或Ctrl+R）。</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">5</span>找到Cookie信息</h3>
+            <p>在Network标签页中，找到对 <strong>comm.ams.game.qq.com</strong> 域名的请求。</p>
+            <p>点击该请求，在右侧面板中找到 <strong>Request Headers</strong>（请求头）部分。</p>
+            <p>找到 <strong>Cookie:</strong> 开头的行，复制整个Cookie内容。</p>
+        </div>
+
+        <div class="step">
+            <h3><span class="step-number">6</span>使用Cookie</h3>
+            <p>将复制的Cookie内容粘贴到我们的检测网站中，然后就可以获取真实的游戏数据进行分析了！</p>
+        </div>
+
+        <div class="tip">
+            <strong>💡 小贴士：</strong>
+            <ul>
+                <li>Cookie通常很长，包含多个键值对，请完整复制</li>
+                <li>如果找不到Cookie，可以尝试在Console标签页输入 <code>document.cookie</code> 查看</li>
+                <li>Cookie有时效性，过期后需要重新获取</li>
+                <li>建议使用无痕模式获取Cookie，避免隐私泄露</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <strong>🔒 安全提醒：</strong>
+            <ul>
+                <li>Cookie包含您的登录凭证，请妥善保管</li>
+                <li>不要在公共场所或不安全的网络环境下使用</li>
+                <li>使用完毕后建议清除浏览器Cookie</li>
+                <li>如发现异常，请立即修改游戏密码</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <a href="javascript:history.back()" class="btn btn-secondary">← 返回检测页面</a>
+            <a href="https://df.qq.com/cp/a20241230webmp/index.html" target="_blank" class="btn">🌐 前往三角洲官网</a>
+        </div>
+    </div>
+</body>
+</html> 
